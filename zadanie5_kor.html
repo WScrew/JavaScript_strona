@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title> Korol 3K</title>
+
+			<script language="JavaScript">
+			function WinOpen_korol1()
+			{
+			window.open("obraz_koro1.html","okienko_z1","toolbar=no,directories=no,menubar=no,height=410,width=260,top=10,left=15");
+			}
+			function WinOpen_korol2()
+			{
+			window.open("obraz_koro2.html","okienko_z2","toolbar=no,directories=no,menubar=no,height=410,width=260,top=10,left=295");
+			}
+			function WinOpen_korol3()
+			{
+			window.open("obraz_koro3.html","okienko_z5","toolbar=no,directories=no,menubar=no,height=410,width=260,top=10,left=575");
+			}
+			function WinOpen_korol4()
+			{
+			window.open("obraz_koro4.html","okienko_z3","toolbar=no,directories=no,menubar=no,height=410,width=260,top=10,left=855");
+			}
+			
+			
+			function okno_zamknij()
+			{
+			window.close()
+			}
+			</script>
+	</head>
+<body>
+	<form>
+	<p style="font-size:1cm; color:red; text-align: center;">Wykonał Maciej Korol mój numer w dzienniku 8, czyli mam układ  [(8)mod 4=0] układ 4</p>
+	<div style="display: block;
+        width: 25%;
+        margin-left: auto;
+        margin-right: auto;">
+		<input type="button" name="grafika_1" value="grafika1" onclick="WinOpen_korol1(' ')">
+		<input type="button" name="grafika_2" value="grafika2" onclick="WinOpen_korol2(' ')">
+		<input type="button" name="grafika_3" value="grafika3" onclick="WinOpen_korol3(' ')">
+		<input type="button" name="grafika_4" value="grafika4" onclick="WinOpen_korol4(' ')">
+	</div><br>
+	<br><br><br>
+	<div style="display: block;
+        width: 10%;
+        margin-left: auto;
+        margin-right: auto;">
+		<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+	</div>
+	</form>
+</body>
+</html>
