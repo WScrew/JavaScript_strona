@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maciej Korol</title>
+</head>
+<body>
+    <textarea rows="30" cols="150">
+<html>
+
+<body>
+    <div style="color:green;font-size:50px;">
+        <script language="JavaScript">
+            // Maciej Korol 3K1 6.10.2025 
+            // Zadanie 12  
+            var D1_kor = prompt("Data1=", "");
+            var G1_kor = prompt("Godzina1=", "");
+            var D2_kor = prompt("Data2=", "");
+            var G2_kor = prompt("Godzina2=", "");
+            var sekund;
+            var a = parseFloat(D1_kor);
+            var b = parseFloat(D2_kor);
+            var g1 = parseFloat(G1_kor);
+            var g2 = parseFloat(G2_kor);
+            sekund = (a - b) * 24 * 3600  + (g1-g2) * 3600;
+            document.write("Ilość sekund między dniami i godzinami " + a + " godzina: "+ g1 +" i " + b + " godzina: "+ g2 +" = " + sekund + "<br>");
+            function okno_zamknij_bilyi() {
+                window.close()
+            } 
+        </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_bilyi()" />
+</body>
+
+</html>
+    </textarea>
+</body>
+</html>
