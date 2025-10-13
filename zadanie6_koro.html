@@ -1,138 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="utf-8" />
-    <title>Maciej Korol</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <style>
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            padding: 24px;
-            border-radius: 8px;
-        }
-
-        h1 {
-            margin-top: 0;
-        }
-
-        .qa {
-            margin-top: 18px;
-        }
-
-        .question {
-            font-weight: 700;
-            margin-top: 14px;
-        }
-
-        .answer {
-            margin: 6px 0 12px 0;
-        }
-
-        code {
-            background: #f3f4f6;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-        }
-
-        .examples {
-            background: #fbfbfb;
-            border-left: 4px solid #e5e7eb;
-            padding: 10px;
-            border-radius: 4px;
-        }
-
-        .note {
-            font-size: 0.95em;
-            color: #555;
-            margin-top: 8px;
-        }
-
-        u {
-            text-decoration-thickness: 2px;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Korol-Zadanie6</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    line-height: 1.6;
+  }
+  b {
+    display: block;
+    margin-top: 15px;
+  }
+  u {
+    text-decoration: underline;
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>Zadanie 6 — Temat: Zadanie teoretyczne</h1>
+
+<h2>Zadanie 6 – Teoria JavaScript</h2>
 
         <button id="Korol-Zadanie6" class="zadanie-btn" onclick="korol_zadanie6Action()">
             Korol_zad_6
         </button>
 
-        <div class="qa">
-            <div class="question"><strong>1) Rodzaje okienek</strong></div>
-            <div class="answer">
-                <u><strong>Okienko <code>alert</code></strong></u> – wyświetla okienko dialogowe z informacją i
-                przyciskiem <strong>OK</strong>.<br>
-                <u><strong>Okienko <code>prompt</code></strong></u> – generuje okno, w którym użytkownik może wpisać
-                wartość; zwraca zawsze <strong>ciąg znaków (string)</strong> do programu.<br>
-                <u><strong>Okienko <code>confirm</code></strong></u> – służy do potwierdzenia przez użytkownika; zwraca
-                <strong>true</strong> (jeśli OK) lub <strong>false</strong> (jeśli Anuluj).
-            </div>
+<div>
+  <b>1) Rodzaje okienek:</b><br>
+  <u>Okienko alert</u> – wyświetla okienko dialogowe z informacją i przyciskiem OK.<br>
+  <u>Okienko prompt</u> – generuje okno, w którym użytkownik może wpisać wartość, zwracaną następnie do programu.<br>
+  <u>Okienko confirm</u> – służy do tego, aby użytkownik coś potwierdził (stąd nazwa confirm).<br>
 
-            <div class="question"><strong>2) Konwersji liczb</strong></div>
-            <div class="answer">
-                Dane wczytane przez <u><strong><code>prompt()</code></strong></u> są domyślnie <strong>ciągiem
-                    znaków</strong>. Aby wykonać obliczenia, trzeba je skonwertować do typów liczbowych. Najważniejsze
-                funkcje konwersji:
-                <div class="examples">
-                    <div><u><strong><code>parseFloat(zmienna)</code></strong></u> – konwersja do liczby
-                        zmiennoprzecinkowej (float).</div>
-                    <div><u><strong><code>parseInt(zmienna)</code></strong></u> – konwersja do liczby całkowitej (int).
-                        Uwaga: obcina część po przecinku i można podać drugi argument (radix), np.
-                        <code>parseInt("10", 10)</code>.</div>
-                    <div><u><strong><code>toString(zmienna)</code></strong></u> – konwersja wartości do łańcucha znaków
-                        (string).</div>
-                </div>
-                <div class="examples" style="margin-top:8px;">
-                    Przykłady:
-                    <pre style="margin:6px 0;padding:8px;background:#fff;border-radius:6px;border:1px solid #eee;">
-                        let s = prompt("Podaj liczbę:");
-                        let x = parseFloat(s);   // teraz x to liczba zmiennoprzecinkowa
-                        let n = parseInt(s);     // teraz n to liczba całkowita
-                        let txt = (123).toString(); // "123"</pre>
-                </div>
-            </div>
+  <b>2) Konwersji liczb:</b><br>
+  Wczytanie zmiennej z użyciem <u>prompt</u> wykonywane jest jako ciąg znaków, dlatego konieczna jest konwersja z ciągu znaków na wartości liczbowe, aby wykonywać obliczenia.<br>
+  <u>parseFloat(zmienna)</u> – konwersja zmiennej do typu float.<br>
+  <u>parseInt(zmienna)</u> – konwersja zmiennej do typu int (liczbowego).<br>
+  <u>toString(zmienna)</u> – konwersja zmiennej do typu łańcuchowego.<br>
 
-            <div class="question"><strong>3) Przy nadawaniu nazw zmiennym należy przestrzegać pewnych zasad:</strong>
-            </div>
-            <div class="answer">
-                Poniżej trzy najważniejsze zasady:
-                <ol>
-                    <li><u><strong>Nazwa musi zaczynać się od litery, znaku <code>$</code> lub
-                                <code>_</code></strong></u> i może zawierać tylko litery (bez polskich znaków), cyfry
-                        oraz <code>$</code> i <code>_</code>. Przykłady poprawne: <code>zmienna1</code>,
-                        <code>$wynik</code>, <code>_rozmiar</code>. Przykłady błędne: <code>1zmienna</code>,
-                        <code>wynik gry</code>, <code>wysokość</code>.</li>
-                    <li><u><strong>Wielkość liter ma znaczenie</strong></u>. <code>Rekord</code> i <code>rekord</code>
-                        to dwie różne zmienne — to częsta przyczyna błędów.</li>
-                    <li><u><strong>Nie używaj słów kluczowych JavaScript jako nazw zmiennych</strong></u> (np.
-                        <code>for</code>, <code>if</code>, <code>let</code>, <code>class</code> itp.).</li>
-                </ol>
-            </div>
+  <b>3) Przy nadawaniu nazw zmiennym należy przestrzegać pewnych zasad:</b><br>
+  <u>1.</u> Nazwa zmiennej musi się zaczynać od litery, znaku "$" lub "_", może zawierać tylko litery (bez polskich znaków), cyfry oraz "$" i "_".<br>
+  <u>2.</u> Wielkość liter ma znaczenie – zmienne <i>Rekord</i> i <i>rekord</i> to dwie różne zmienne.<br>
+  <u>3.</u> Nie należy używać słów kluczowych JavaScript jako nazw zmiennych.<br>
 
-            <div class="question"><strong>4) Omów typy zmiennych w Javascript</strong></div>
-            <div class="answer">
-                W JavaScript typy nie są deklarowane wcześniej tak jak w C++; zmienna otrzymuje typ w momencie
-                przypisania. Podstawowe typy:
-                <ul>
-                    <li><u><strong>Number</strong></u> – typ liczbowy. Obejmuje liczby całkowite i zmiennoprzecinkowe (w
-                        JS oba są typu Number).</li>
-                    <li><u><strong>String</strong></u> – typ tekstowy (łańcuch znaków).</li>
-                    <li><u><strong>Boolean</strong></u> – typ logiczny: <code>true</code> lub <code>false</code>.</li>
-                    <li><u><strong>Null</strong></u> – reprezentuje świadomie pustą zawartość (wartość "brak").</li>
-                    <li><u><strong>Undefined</strong></u> – zmienna zadeklarowana, ale nieprzypisana ma wartość
-                        <code>undefined</code>.</li>
-                    <li><u><strong>Object</strong></u> – obiekty, tablice, funkcje i inne struktur danych.</li>
-                </ul>
-            </div>
-        </div>
+  <b>4) Typy zmiennych w JavaScript:</b><br>
+  W JavaScript typy zmiennych są <u>definiowane w trakcie przypisywania</u>, a nie tak jak w C++ – z góry.<br>
+  <u>Number</u> – typ liczbowy (całkowite i zmiennoprzecinkowe).<br>
+  <u>String</u> – typ tekstowy.<br>
+  <u>Boolean</u> – typ logiczny (prawda/fałsz).<br>
+  <u>Null</u> – pusta zawartość.<br>
+  <u>Undefined</u> – typ niezidentyfikowany.<br>
+  <u>Object</u> – obiekt.
 
-        <script>
+</div>
+          <script>
             function korol_zadanie6Action() {
                 alert("Przycisk 'korol-Zadanie6' kliknięty. Teraz przykładowe prompt/konwersja.");
 
@@ -153,6 +74,5 @@
                 console.log("Typy (przykład):", { s_type: typeof s, f_type: typeof f, i_type: typeof i });
             }
         </script>
-    </div>
 </body>
 </html>
