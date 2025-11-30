@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 20</title>
+    <script>
+        function AB_koro(A, B) {
+            return Math.sqrt(Math.pow(B.x - A.x, 2) + Math.pow(B.y - A.y, 2));
+        }
+
+        function BC_koro(B, C) {
+            return Math.sqrt(Math.pow(C.x - B.x, 2) + Math.pow(C.y - B.y, 2));
+        }
+
+        function AC_koro(A, C) {
+            return Math.sqrt(Math.pow(C.x - A.x, 2) + Math.pow(C.y - A.y, 2));
+        }
+
+        function obliczBoki() {
+            let xa_koro = parseFloat(prompt("Podaj współrzędną X punktu A:"));
+            let ya_koro = parseFloat(prompt("Podaj współrzędną Y punktu A:"));
+            let xb_koro = parseFloat(prompt("Podaj współrzędną X punktu B:"));
+            let yb_koro = parseFloat(prompt("Podaj współrzędną Y punktu B:"));
+            let xc_koro = parseFloat(prompt("Podaj współrzędną X punktu C:"));
+            let yc_koro = parseFloat(prompt("Podaj współrzędną Y punktu C:"));
+
+            let A = {x: xa_koro, y: ya_koro};
+            let B = {x: xb_koro, y: yb_koro};
+            let C = {x: xc_koro, y: yc_koro};
+
+            let AB = AB_koro(A, B);
+            let BC = BC_koro(B, C);
+            let AC = AC_koro(A, C);
+
+            document.getElementById("wynik").innerHTML =
+                "<b>Długości boków trójkąta:</b><br>" +
+                "AB = " + AB.toFixed(2) + "<br>" +
+                "BC = " + BC.toFixed(2) + "<br>" +
+                "AC = " + AC.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Zadanie 20 - Obliczanie długości boków trójkąta</h1>
+    <button onclick="obliczBoki()">Wczytaj punkty i oblicz długości boków</button>
+    <p id="wynik"></p>
+</body>
+</html>

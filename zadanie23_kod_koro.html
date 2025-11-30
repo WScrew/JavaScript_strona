@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea rows="60" cols ="150">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRABINA I KĄT</title>
+    <script>
+        function Drabina(d, x) {
+            c = parseFloat(d);
+            h = parseFloat(x);
+            Drabina_w = Math.sqrt((c * c) + (h * h));
+            document.getElementsByName('drab')[0].value = Drabina_w.toFixed(2);
+            alert("Drabina = " + Drabina_w.toFixed(2) + " cm");
+            document.getElementById('pokaz1').innerHTML = "Drabina= " + Drabina_w.toFixed(2) + " cm" + "<br>";
+        }
+        function Alfa(d, x) {
+            c = parseFloat(d);
+            h = parseFloat(x);
+            var sinA = c / Math.sqrt((c * c) + (h * h));
+            var aRad = Math.asin(sinA);
+            var aDeg = aRad * (180 / Math.PI);
+            Alfa_w = aDeg;
+            document.getElementsByName('alfa')[0].value = Alfa_w.toFixed(2);
+            alert("Alfa= " + Alfa_w.toFixed(2));
+            document.getElementById('pokaz2').innerHTML = "Alfa= " + Alfa_w.toFixed(2) + "<br>";
+        }
+    </script>
+</head>
+<body>
+    Obliczenie Drabina i Kąta
+    <br><br>
+    <form name="formularz" action=""
+        onsubmit="Drabina(this.d.value,this.x.value); Alfa(this.d.value,this.x.value); return false;">
+        Podaj D= 
+        <input size="6" name="d">
+        Podaj x= 
+        <input size="6" name="x"> 
+        <br><br>
+        <button type="submit">Oblicz</button>
+        <button type="reset">Wyczyść</button>
+        <br> <br>
+        Drabina=
+        <input size="6" name="drab">
+        Alfa=
+        <input size="6" name="alfa">
+    </form>
+    <table>
+        <tr>
+            <td id="pokaz1"></td>
+        </tr>
+        <tr>
+            <td id="pokaz2"></td>
+        </tr>
+    </table>
+</body>
+</html>
+    </textarea>
+</body>
+</html>

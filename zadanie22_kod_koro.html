@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea rows="40" cols="150">
+<!DOCTYPE html>
+
+	<head>
+        <script>
+            function Pole_korer(a_kor, b_kor) {
+                let w = parseFloat(a_kor) * parseFloat(b_kor);
+                document.getElementsByName("pole")[0].value = `${w.toFixed(2).toString()} cm`;
+                document.getElementsByName("wyprowadz_pole_kor")[0].innerHTML = `Pole = ${w.toFixed(2).toString()} cm`;
+            }
+
+            function obwod_korer(a_kor, b_kor) {
+                let w = (parseFloat(a_kor)*2) + (parseFloat(b_kor)*2);
+                document.getElementsByName("obw")[0].value = `${w.toFixed(2).toString()} cm^2`;
+                document.getElementsByName("wyprowadz_obwod_kor")[0].innerHTML = `Obwód = ${w.toFixed(2).toString()} cm^2`;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="formularz" action="..." onsubmit="Pole_korer(this.a_dana_kor.value, this.b_dana_kor.value); obwod_korer(this.a_dana_kor.value, this.b_dana_kor.value); return false;">   
+            Podaj A= 
+                <input  size="6"  name="a_dana_kor"> 
+            Podaj B= 
+                <input  size="6"  name="b_dana_kor"> 
+                            <br>   <br> 
+                <input  TYPE="submit"  Value="oblicz" > 
+                            <br>   <br> 
+            Pole= 
+                <input  size="6"  name="pole"> 
+            Obwód= 
+                <input  size="6"  name="obw"> 
+        </form> 
+        <br>
+        <table>
+            <tr name="wyprowadz_pole_kor"></tr>
+            <tr name="wyprowadz_obwod_kor"></tr>
+        </table><br>
+    </body>
+</html>
+    </textarea>
+</body>
+</html>
