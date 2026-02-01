@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            let autobus = {
+                przystanki: "cieszynskiego",
+                pasazerowie: 38,
+                Autobus_pokaz_korol: function() {
+                    document.write(`Przystanki: ${this.przystanki}<br>Pasazerowie: ${this.pasazerowie}`);
+                }
+            }
+
+            autobus.Autobus_pokaz_korol(); 
+            autobus.numer_lini_autobusu = 154; 
+            autobus.wypisz = function() {alert('Numer lini autobusu: ' + this.numer_lini_autobusu + ' linia')} 
+            autobus.wypisz(); 
+        </script>
+    </head>
+    <body>
+        <br><br><br>
+        Programowanie obiektowe. <br> 
+        Obiekt  to  autobus<br> 
+        Pola:<br> 
+        Przystanki<br> 
+        Pasażerowie<br> 
+        metoda:  Autobus_pokaz_korol<br> 
+        nowe pole to numer_lini_autobusu <br> 
+        nowa metoda to wypisz();<br>
+    </body>
+</html>

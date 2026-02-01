@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea rows="40" cols="150">
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <script type="text/javascript"> 
+            function autobus(pasazerowie_k, przystanki_k, numer_lini_autobusu_k)
+            { 
+                this.pasazerowie = pasazerowie_k; 
+                this.przystanki = przystanki_k;
+                this.numer_lini_autobusu = numer_lini_autobusu_k;   
+            }
+            
+            autobus.prototype.wypisz = function() { 
+                alert(" Pasazerowie: " + this.pasazerowie + ". Przystanki: " + this.przystanki + ". Numer lini autobusu: " + this.numer_lini_autobusu); 
+            }; 
+            
+            var autobus1 = new autobus(38, "cieszynskiego", 154);
+            var autobus2 = new autobus(51, "dworzec glowny", 208); 
+            autobus1.wypisz();
+            autobus2.wypisz(); 
+            document.write("dostęp do właściwości"+"<br>"); 
+            document.write("pierwszy autobus" + "   " + autobus1.pasazerowie + "   " + autobus1.przystanki + "   " + autobus1.numer_lini_autobusu); 
+        </script> 
+    </head> 
+    <body> 
+        <br> 
+        programowanie obiektowe   
+    </body> 
+</html>
+    </textarea>
+</body>
+</html>
