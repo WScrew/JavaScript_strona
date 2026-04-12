@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea cols="120" rows="87">
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title>Korol Z41</title>
+    <meta_kor charset="utf-8">
+    <style>
+        h1 {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Proste działania</h1>
+    <label for="a_kor">Podaj pierwszą liczbę:</label> <input type="number" id="a_kor">
+    <br><br>
+    <label for="b_kor">Podaj drugą liczbę:</label> <input type="number" id="b_kor">
+    <br><br>
+    <input type="button" value="DODAWANIE" onclick="suma()">
+    <input type="button" value="ODEJMOWANIE" onclick="roznica()">
+    <input type="button" value="MNOŻENIE" onclick="iloczyn()">
+    <input type="button" value="DZIELENIE" onclick="iloraz()">
+	<input type="button" value="TEORIA-KOROL" onclick="teoria_kor()"> 
+    <div id="wynik" style="margin-top:20px;"></div>
+    <script>
+		function teoria_kor()
+            {
+                document.write("<font color=green size=4>pierwsza linia kodu</font><br>");
+                document.write("<font color=red size=4>&ltlabel for=\"a\"&gtPodaj pierwszą liczbę:&lt/label&gt&ltinput type=\"number\" id=\"a\"&gt</font><br>");
+                document.write("<font color=green size=4>wytłumaczenie:</font><br>");
+                document.write("<font color=red size=4>Ta linijka kodu HTML tworzy interfejs użytkownika składający się z <b><u>etykiety (label)</u></b>[opis wprowadzania danych, czyli tekst przed polem input] i <b><u>pola do wprowadzania danych (input)</u></b> w języku JavaScript (oraz HTML). <b>label i input</b> współpracują między sobą.</font><br>");
+                document.write("<br><br>");
+
+                document.write("<font color=green size=4>druga linia kodu</font><br>");
+                document.write("<font color=red size=4>&ltinput type=\"button\" value=\"DODAWANIE\" onclick=\"suma()\"&gt</font><br>");
+                document.write("<font color=green size=4>wytłumaczenie:</font><br>");
+                document.write("<font color=red size=4>Wykonanie przycisku o nazwie DODAWANIE i z takim samym napisem, kliknięcie myszką uruchamia funkcję suma()</font><br>");
+                document.write("<br><br>");
+
+                document.write("<font color=green size=4>trzecia linia kodu</font><br>");
+                document.write("<font color=red size=4>var a = document.getElementById(\"a\").value;</font><br>");
+                document.write("<font color=green size=4>wytłumaczenie:</font><br>");
+                document.write("<font color=red size=4>wpisanie do zmiennej \"a\" wartości z elementu o Id \"a\" (zbieżność nazw)</font><br>");
+                document.write("<br><br>");
+
+                document.write("<font color=green size=4>czwarta linia kodu</font><br>");
+                document.write("<font color=red size=4>if (a == \"\" || b == \"\")</font><br>");
+                document.write("<font color=green size=4>wytłumaczenie:</font><br>");
+                document.write("<font color=red size=4>sprawdzenie czy pola \"a\" lub \"b\" są puste.</font><br>");
+                document.write("<br><br>");
+
+                document.write("<font color=green size=4>piąta linia kodu</font><br>");
+                document.write("<font color=red size=4>document.getElementById(\"wynik\").innerHTML = \"Wynik działania wynosi:\" + suma;</font><br>");
+                document.write("<font color=green size=4>wytłumaczenie:</font><br>");
+                document.write("<font color=red size=4>pobranie wartości Id o nazwie \"wynik\" i wyprowadzenie w oknie przglądarki tekstu \"Wynik działania wynosi: \" oraz wartości zmiennej suma;</font><br>");
+                document.write("<br><br>");
+            }
+
+        function suma() {
+            var a_kor = document.getElementById("a_kor").value;
+            var b_kor = document.getElementById("b_kor").value;
+            if (a_kor == "" || b_kor == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a_kor = parseFloat(a_kor);
+                b_kor = parseFloat(b_kor);
+                var suma_kor = a_kor + b_kor;
+                document.getElementById("wynik").innerHTML = "Wynik działania_kor wynosi: " + suma_kor;
+            }
+            //alert(a_kor); 
+            //console.log(a_kor); 
+        }
+        function roznica() {
+            var a_kor = document.getElementById("a_kor").value;
+            var b_kor = document.getElementById("b_kor").value;
+            if (a_kor == "" || b_kor == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a_kor = parseFloat(a_kor);
+                b_kor = parseFloat(b_kor);
+                var roznica_kor = a_kor - b_kor;
+                document.getElementById("wynik").innerHTML = "Wynik działania_kor wynosi: " + roznica_kor;
+            }
+        }
+        function iloczyn() {
+            var a_kor = document.getElementById("a_kor").value;
+            var b_kor = document.getElementById("b_kor").value;
+            if (a_kor == "" || b_kor == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a_kor = parseFloat(a_kor);
+                b_kor = parseFloat(b_kor);
+                var iloczyn_kor = a_kor * b_kor;
+                document.getElementById("wynik").innerHTML = "Wynik działania_kor wynosi: " + iloczyn_kor;
+            }
+        }
+
+        function iloraz() {
+            var a_kor = document.getElementById("a_kor").value;
+            var b_kor = document.getElementById("b_kor").value;
+            if (a_kor == "" || b_kor == "") {
+                document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a_kor = parseFloat(a_kor);
+                b_kor = parseFloat(b_kor);
+                if (b_kor == 0) {
+                    document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
+                }
+                else {
+                    var iloraz_kor = a_kor / b_kor;
+                    document.getElementById("wynik").innerHTML = "Wynik działania_kor wynosi: " + iloraz_kor;
+                }
+            }
+        } 
+    </script>
+</body>
+
+</html>
+    </textarea>
+</body>
+</html>
