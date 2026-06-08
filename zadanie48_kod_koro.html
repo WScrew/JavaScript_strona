@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea cols="320" rows="187">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Zadanie 48/Sprawdzenie danych Maciej Korol</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div style="color:red;font-size:50px;">
+        <script>
+            let h_kor;
+            do {
+                let liczba1 = prompt("wysokość=", "");
+                h_kor = parseFloat(liczba1);
+            } while (h_kor <= 0);
+
+            let a_kor;
+            do {
+                let liczba1 = prompt("podstawę=", "");
+                a_kor = parseFloat(liczba1);
+            } while (!(a_kor > 0));
+
+            let Pole = a_kor * h_kor / 2;
+            document.write("Pole=" + Pole.toFixed(2) + " cm^2" + "<br>");
+        </script>
+    </div>
+	</textarea>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea cols="320" rows="187">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 43_Maciej Korol</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 20px; line-height: 1.4; }
+        .pętla { border-bottom: 2px solid #ccc; padding-bottom: 15px; margin-bottom: 15px; }
+        pre { background: #eee; padding: 8px; font-family: monospace; }
+    </style>
+</head>
+<body>
+
+    <h1>Teoria pętli</h1>
+
+    <div class="pętla">
+        <h2>1. Pętla for</h2>
+        <p><b>Konstrukcja:</b></p>
+        <pre>for (inicjalizacja; warunek; modyfikacja) {
+    // kod
+}</pre>
+        <p><b>Opis:</b> Używana, gdy liczba powtórzeń jest znana z góry.</p>
+        <p><b>Schemat:</b> [Start] -> [Inicjalizacja] -> [Warunek?] --TAK--> [Kod] -> [Modyfikacja] -> (powrót do warunku) | --NIE--> [Koniec]</p>
+    </div>
+
+    <div class="pętla">
+        <h2>2. Pętla while (kontrolowane wejście)</h2>
+        <p><b>Konstrukcja:</b></p>
+        <pre>while (warunek) {
+    // kod
+}</pre>
+        <p><b>Opis:</b> Sprawdza warunek przed wykonaniem kodu. Może nie wykonać się ani razu.</p>
+        <p><b>Schemat:</b> [Start] -> [Warunek?] --TAK--> [Kod] -> (powrót do warunku) | --NIE--> [Koniec]</p>
+    </div>
+
+    <div class="pętla">
+        <h2>3. Pętla do while (kontrolowane wyjście)</h2>
+        <p><b>Konstrukcja:</b></p>
+        <pre>do {
+    // kod
+} while (warunek);</pre>
+        <p><b>Opis:</b> Sprawdza warunek po wykonaniu kodu. Zawsze wykona się minimum raz.</p>
+        <p><b>Schemat:</b> [Start] -> [Kod] -> [Warunek?] --TAK--> (powrót do kodu) | --NIE--> [Koniec]</p>
+    </div>
+	</textarea>
+</body>
+</html>

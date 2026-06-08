@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 56 Maciej Korol</title>
+</head>
+<body>
+
+    <script>
+        let imie = prompt("Podaj imię:", "");
+        let nazwisko = prompt("Podaj nazwisko:", "");
+
+        let a_kor = (nazwisko.length % 4) + 5;
+        let b_kor = (imie.length % 6) + 20;
+
+        document.write("<pre style='font-family: monospace; font-size: 20px; line-height: 1.2;'>");
+
+        for (let i = 1; i <= b_kor; i++) {
+            document.write("*");
+        }
+        document.write("<br>");
+
+        for (let i = 1; i <= a_kor - 2; i++) {
+            document.write("*");
+            for (let j = 1; j <= b_kor - 2; j++) {
+                document.write("&nbsp;");
+            }
+            document.write("*<br>");
+        }
+
+        for (let i = 1; i <= b_kor; i++) {
+            document.write("*");
+        }
+        document.write("<br>");
+
+        document.write("</pre>");
+    </script>
+
+</body>
+</html>

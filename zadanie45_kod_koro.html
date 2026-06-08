@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea cols="320" rows="187">
+	<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 45_Maciej Korol</title>
+</head>
+<body>
+
+    <h1>Zadanie 45</h1>
+    <script>
+        // Wczytanie liczby od użytkownika za pomocą okienka prompt
+        let koniec_petli_kor = prompt("Podaj liczbę końcową pętli:", "20");
+        koniec_petli_kor = parseInt(koniec_petli_kor);
+
+        document.write("Liczby parzyste od 2 do " + koniec_petli_kor + ":<br>");
+
+        // Pętla wypisująca liczby parzyste
+        for (let i_kor = 2; i_kor <= koniec_petli_kor; i_kor += 2) {
+            document.write(i_kor + " ");
+        }
+    </script>
+	</textarea>
+</body>
+</html>

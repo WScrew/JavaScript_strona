@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 55 Maciej Korol</title>
+</head>
+<body>
+
+    <script>
+        let a_kor = parseInt(prompt("Podaj wysokość a:", "5"));
+        let b_kor = parseInt(prompt("Podaj szerokość b:", "20"));
+
+        for (let i = 1; i <= b_kor; i++) {
+            document.write("*");
+        }
+        document.write("<br>");
+
+        for (let i = 1; i <= (a_kor - 2); i++) {
+            let wiersz_kor = "*";
+            
+            for (let j = 1; j <= (b_kor - 2); j++) {
+                wiersz_kor = wiersz_kor + "&nbsp;&nbsp;";
+            }
+            
+            wiersz_kor = wiersz_kor + "*";
+            document.write(wiersz_kor + "<br>");
+        }
+
+        for (let i = 1; i <= b_kor; i++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    </script>
+
+</body>
+</html>

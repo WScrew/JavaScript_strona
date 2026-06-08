@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea cols="320" rows="187">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 47 Maciej Korol</title>
+</head>
+<body>
+
+    <h1>Zadanie 47</h1>
+    
+    <p>ilość wykonania pętli = 11</p>
+    <p>wielkość liter = 42px</p>
+
+    <script>
+        let koniec_petli_kor = prompt("Podaj dowolną liczbę:", "10");
+        koniec_petli_kor = parseInt(koniec_petli_kor);
+
+        let kolor_kor;
+        let tekst_kor;
+
+        if (koniec_petli_kor % 2 === 0) {
+            kolor_kor = "blue";
+            tekst_kor = "Korol";
+        } else {
+            kolor_kor = "green";
+            tekst_kor = "Maciej";
+        }
+
+        document.write("<div style='font-size: 42px; color: " + kolor_kor + ";'>");
+        for (let i_kor = 1; i_kor <= 11; i_kor++) {
+            document.write(i_kor + ". " + tekst_kor + "<br>");
+        }
+        document.write("</div>");
+    </script>
+	</textarea>
+</body>
+</html>

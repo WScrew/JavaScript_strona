@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Zadanie 49 Maciej Korol</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div style="color:blue; font-size:40px;">
+        <script>
+            let a_kor, b_kor, c_kor;
+            let warunek_kor;
+
+            do {
+                a_kor = parseFloat(prompt("Podaj bok a:", ""));
+                b_kor = parseFloat(prompt("Podaj bok b:", ""));
+                c_kor = parseFloat(prompt("Podaj bok c:", ""));
+
+                let dodatnie = (a_kor > 0) && (b_kor > 0) && (c_kor > 0);
+                let nierownosc = (a_kor + b_kor > c_kor) && (a_kor + c_kor > b_kor) && (c_kor + b_kor > a_kor);
+
+                if (dodatnie && nierownosc) {
+                    warunek_kor = false;
+                } else {
+                    warunek_kor = true;
+                    alert("Podane boki nie tworzą trójkąta! Spróbuj ponownie.");
+                }
+            } while (warunek_kor);
+
+            document.write("Podane boki tworzą trójkąt:<br>");
+            document.write("a = " + a_kor + "<br>");
+            document.write("b = " + b_kor + "<br>");
+            document.write("c = " + c_kor + "<br>");
+        </script>
+    </div>
+</body>
+</html>
